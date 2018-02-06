@@ -2,5 +2,5 @@
 
    resources :students
    resources :school_classes
-   
+
  end
