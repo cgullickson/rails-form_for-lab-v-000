@@ -11,7 +11,7 @@ class SchoolClassesController < ApplicationController
   def create
     @class = SchoolClass.create(school_class_params)
     @class.update(school_class_params)
-    redirect_to school_class_path(@school)
+    redirect_to school_class_path(@class)
   end
 
   def show
