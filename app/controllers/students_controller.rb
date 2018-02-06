@@ -1,5 +1,8 @@
 class StudentsController < ApplicationController
 
+  def index
+  end
+
   def new
   end
 
@@ -12,7 +15,6 @@ class StudentsController < ApplicationController
   def update
   end
 
-  def index
-  end
+
 
 end
