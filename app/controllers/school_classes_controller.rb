@@ -1,31 +1,31 @@
 class SchoolClassesController < ApplicationController
 
   def index
-    @schoolclasses = SchoolClass.all
+    @classes = SchoolClass.all
   end
 
   def new
-    @schoolclass = SchoolClass.new
+    @class = SchoolClass.new
   end
 
   def create
-    @schoolclass = SchoolClass.new
-    @schoolclass.save
+    @class = SchoolClass.new
+    @class.save
     redirect_to school_class_path
   end
 
   def show
-    @schoolclass = SchoolClass.find_by(params[:id])
+    @class = SchoolClass.find_by(params[:id])
   end
 
   def edit
-    @schoolclass = SchoolClass.find_by(params[:id])
+    @class = SchoolClass.find_by(params[:id])
   end
 
   def update
-    @schoolclass = SchoolClass.find_by(params[:id])
-    @schoolclass.update(school_class_params)
-    redirect_to school_class_path(@schoolclass)
+    @class = SchoolClass.find_by(params[:id])
+    @class.update(school_class_params)
+    redirect_to school_class_path(@class)
   end
 
   def delete
@@ -33,7 +33,7 @@ class SchoolClassesController < ApplicationController
 
   private
 
-  def schoolclass_params
+  def school_class_params
     params.require(:school_class).permit(:title, :room_number)
   end
 
