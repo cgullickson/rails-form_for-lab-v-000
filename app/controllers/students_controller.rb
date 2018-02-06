@@ -14,6 +14,10 @@ class StudentsController < ApplicationController
     redirect_to student_path
   end
 
+  def show
+    @student = Student.find_by(params[:id])
+  end
+
   def edit
   end
 
