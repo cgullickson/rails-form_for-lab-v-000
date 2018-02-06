@@ -9,9 +9,9 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
-    @class = SchoolClass.new
-    @class.save
-    redirect_to school_class_path
+    @class = SchoolClass.create(school_class_params)
+    @class.update(school_class_params)
+    redirect_to school_class_path(@school)
   end
 
   def show
